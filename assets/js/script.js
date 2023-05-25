@@ -12,6 +12,12 @@ var timer;
 var timerCount;
 
 function startQuiz() {
+    console.log('Testing start button')
+    startPage.classList.add('hide')
+    quizContent.classList.remove('hide')
+    timerCount = 10;
+    renderQuestions()
+    startTimer()
 }
 
 // Load questions on screen
@@ -24,7 +30,7 @@ function checkAnswers() {
 }
 
 function endQuiz() {
-
+    
 }
 
 function setHighScores() {
@@ -36,7 +42,15 @@ function getHighScores() {
 }
 
 function startTimer() {
+    timer = setInterval(function() {
+        timerCount--;
+        timerElement.textContent = timerCount;
 
+        if (timerCount === 0) {
+            clearInterval(timer);
+            endQuiz();
+        }
+    }, 1000);
 }
 
 function viewHighScores() {
@@ -48,6 +62,10 @@ function clearScores() {
 }
 
 function init() {
-
+    
 }
 
+startButton.addEventListener('click', startQuiz);
+submitButton.addEventListener('click', viewHighScores);
+goBackButton.addEventListener('click', startQuiz);
+clearScoresButton.addEventListener('click', clearScores);
