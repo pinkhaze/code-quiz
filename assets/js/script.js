@@ -30,7 +30,8 @@ function checkAnswers() {
 }
 
 function endQuiz() {
-    
+    quizContent.classList.add('hide');
+    endPage.classList.remove('hide');
 }
 
 function setHighScores() {
@@ -54,11 +55,17 @@ function startTimer() {
 }
 
 function viewHighScores() {
+    console.log("Testing Submit button");
+    endPage.classList.add("hide");
+    scoresPage.classList.remove("hide");
+
+    
 
 }
 
 function clearScores() {
-    
+    console.log("Testing Clear High Scores button");
+
 }
 
 function init() {
