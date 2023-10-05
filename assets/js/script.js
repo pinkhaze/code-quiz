@@ -44,8 +44,8 @@ function startQuiz() {
 
 function renderQuestion() {
     var currQuestion = questionBank[index];
+    questionElement.textContent = currQuestion.question;
     for (var i = 0; i < currQuestion.answers.length; i++) {
-        questionElement.textContent = currQuestion.question;
         var answerButton = document.createElement('button');
         var currAnswer = currQuestion.answers[i];
         answerButton.textContent = currAnswer;
