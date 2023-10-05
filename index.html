@@ -10,6 +10,7 @@
 <body>
   <header>
     <div>
+      <!--<a href="./scores.html">View High Scores</a>-->
       <a href="#scores-page">View High Scores</a>
     </div>
     <div>Time: <span id="timer-count"></span></div>
@@ -17,15 +18,13 @@
   <div class="wrapper">
     <div id="start-page">
       <h2>Coding Quiz Challenge</h2>
-      <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+      <p>Try to answer the following code-related questions within the time limit.<br>
+        Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
       <button id="start-button" class="button">Start Quiz</button>
     </div>
     <div id="quiz-content" class="hide">
-      <div id="question">Question Placeholder</div>
-      <button class="answer-button">Answer Placeholder</button>
-      <button class="answer-button">Answer Placeholder</button>
-      <button class="answer-button">Answer Placeholder</button>
-      <button class="answer-button">Answer Placeholder</button>
+      <div id="question"></div>
+      <div id="answers"></div>
       <div id="correct-wrong" class="hide"></div>
     </div>
     <div id="end-page" class="hide">
